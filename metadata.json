@@ -1,0 +1,6 @@
+{
+  "name": "Penny AI",
+  "description": "Penny AI - Minimal, AI-powered personal budget and expense tracking app with smart natural language entry, receipt scanning, and financial assistant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

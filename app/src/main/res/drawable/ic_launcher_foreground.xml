@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Stylized modern finance diamond vault emblem in pure white -->
+    <path
+        android:pathData="M54,28 L76,46 L76,64 L54,80 L32,64 L32,46 Z"
+        android:strokeWidth="2.5"
+        android:strokeColor="#FFFFFF"
+        android:fillColor="#00000000" />
+
+    <!-- Upward financial trend line / growth crest -->
+    <path
+        android:pathData="M40,60 L49,50 L57,56 L68,42"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeColor="#FFFFFF"
+        android:fillColor="#00000000" />
+
+    <!-- Arrow head for upward trend -->
+    <path
+        android:pathData="M60,42 L68,42 L68,50"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeColor="#FFFFFF"
+        android:fillColor="#00000000" />
+
+    <!-- Center accent diamond dot -->
+    <path
+        android:pathData="M54,36 L57,40 L54,44 L51,40 Z"
+        android:fillColor="#FFFFFF" />
+</vector>

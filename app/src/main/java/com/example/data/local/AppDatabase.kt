@@ -1,0 +1,44 @@
+package com.example.data.local
+
+import android.content.Context
+import androidx.room.Database
+import androidx.room.Room
+import androidx.room.RoomDatabase
+
+@Database(
+    entities = [
+        TransactionEntity::class,
+        BudgetEntity::class,
+        GoalEntity::class,
+        SubscriptionEntity::class,
+        UserPreferenceEntity::class
+    ],
+    version = 1,
+    exportSchema = false
+)
+abstract class AppDatabase : RoomDatabase() {
+    abstract fun transactionDao(): TransactionDao
+    abstract fun budgetDao(): BudgetDao
+    abstract fun goalDao(): GoalDao
+    abstract fun subscriptionDao(): SubscriptionDao
+    abstract fun userPreferenceDao(): UserPreferenceDao
+
+    companion object {
+        @Volatile
+        private var INSTANCE: AppDatabase? = null
+
+        fun getDatabase(context: Context): AppDatabase {
+            return INSTANCE ?: synchronized(this) {
+                val instance = Room.databaseBuilder(
+                    context.applicationContext,
+                    AppDatabase::class.java,
+                    "lumina_database"
+                )
+                    .fallbackToDestructiveMigration(dropAllTables = true)
+                    .build()
+                INSTANCE = instance
+                instance
+            }
+        }
+    }
+}
